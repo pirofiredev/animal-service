@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Stack Sans Text';
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.fixedmaxwidth {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* START OF HEADER */
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0 15px;
+}
+
+.logo-link {
+    width: 100px;
+    height: 100px;
+}
+
+.logo-link img {
+    width: inherit;
+    height: inherit;
+}
+
+.header-main-links {
+    display: flex;
+    gap: 20px;
+}
+
+.header-main-links * {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+#nav-item1 {
+    border-bottom: 2px solid black;
+    user-select: none;
+}
+
+#nav-item2:hover {
+    color: #75C149;
+    cursor: pointer;
+}
+
+#nav-item3:hover {
+    color: #75C149;
+    cursor: pointer;
+}
+
+#nav-item4:hover {
+    color: #75C149;
+    cursor: pointer;
+}
+
+/* END OF HEADER */
+
+
+
+/* START OF CONSTRUCTION */
+
+.constructing {
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.constructing h1 {
+    font-size: 26px;
+    font-weight: 500;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.constructing a {
+    color: black;
+    transition: 0.2s ease-in-out;
+}
+
+.constructing a:hover {
+    color: #75C149;
+}
+
+/* END OF CONSTRUCTION */
+
+
+
+/* START OF OFFERS */
+
+.offers {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.offers p {
+    padding: 0 0 10px 0;
+}
+
+.offer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.77);
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.offer:hover {
+    box-shadow: 0 0px 7px 4px #75C149;
+}
+
+.offer-title {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.offer-text {
+    font-weight: 300;
+}
+
+
+/* END OF OFFERS*/
+
+
+/* START OF FILLER */
+
+.filler-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.gallery-title {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.filler-images-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}   
+
+.filler-images-container img {
+    width: 25%;
+    height: auto;
+    margin: 0 10px 10px 10px;
+}
+
+/* END OF FILLER */
+
+
+
+/* START OF FOOTER */
+
+.footer-wrap {
+    padding: 10px;
+    background-color: #75C149;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+}
+
+.footer-container img {
+    width: 4%;
+    height: auto;
+}
+
+/* END OF FOOTER */
+
+
+/* START OF OPTIMIZATION HOME */
+
+@media screen and (max-device-width:777px) {
+
+    .footer-container img {
+        width: 5%;
+    }
+
+    .logo-link {
+        width: 80px;
+        height: 80px;
+    }
+
+    .filler-images-container img {
+        width: 30%;
+    }
+
+    .constructing h1 {
+        font-size: 20px;
+    }
+
+    .fixedmaxwidth {
+        margin: 0 auto;
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-device-width:641px) {
+
+    .footer-container img {
+        width: 6%;
+    }
+
+    .constructing h1 {
+        font-size: 18px;
+    }
+
+    .filler-images-container img {
+        width: 35%;
+    }
+
+    .fixedmaxwidth {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-device-width:570px) {
+
+    .footer-container img {
+        width: 8%;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .constructing h1 {
+        font-size: 16px;
+    }
+
+    .fixedmaxwidth {
+        margin: 0 auto;
+        max-width: 500px;
+    }
+
+    .filler-images-container img {
+        width: 40%;
+    }
+}
