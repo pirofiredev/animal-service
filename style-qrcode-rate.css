@@ -39,11 +39,18 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
+    padding: 0 15px;
 }
 
 .logo-link {
+    display: flex;
+    align-items: center;
     width: 100px;
     height: 100px;
+}
+
+.logo-link p {
+    display: none;
 }
 
 .logo-link img {
@@ -84,6 +91,52 @@ nav {
 }
 
 /* END OF HEADER */
+
+/* BURGERMENU START */
+
+#burgermenu {
+    display: none;
+}
+
+.burgermenu-popup {
+    display: none;
+}
+
+#burgerclose {
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+#burgeropen {
+    width: 35px;
+    height: 35px;
+    display: none;
+}
+
+.burger-links-container {
+    position: absolute;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.847);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    gap: 5px;
+}
+
+.burger-links-container a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.burger-links-container p {
+    text-align: center;
+    color: #75C149;
+    font-weight: 600;
+}
+
+/* BURGERMENU END */
 
 
 
@@ -175,6 +228,7 @@ nav {
 }
 
 .rate-title {
+    text-align: center;
     margin-bottom: 15px;
 }
 
@@ -196,6 +250,7 @@ nav {
     background-color: rgba(0, 0, 0, 0.62);
     transition: all 0.2s ease-in-out;
     font-size: 22px;
+    text-align: center;
 }
 
 .rate-button p {
@@ -226,15 +281,21 @@ nav {
 
 /* START OF FOOTER */
 
+footer {
+    width: 100%;
+    background-color: #75C149;
+}
+
 .footer-wrap {
     padding: 10px;
-    background-color: #75C149;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
     color: white;
     font-weight: 500;
 }
@@ -242,4 +303,111 @@ nav {
 .footer-container img {
     width: 4%;
     height: auto;
+}
+
+/* END OF FOOTER */
+
+/* START OF OPTIMIZATION */
+
+@media screen and (max-device-width:641px) {
+
+    .footer-container img {
+        width: 6%;
+    }
+
+    .constructing h1 {
+        font-size: 18px;
+    }
+
+    .filler-images-container img {
+        width: 35%;
+    }
+
+    .fixedmaxwidth {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-device-width:570px) {
+
+    .fixedmaxwidth {
+        max-width: 450px;
+    }
+
+    .footer-container img {
+        width: 8%;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .constructing h1 {
+        font-size: 16px;
+    }
+
+    .filler-images-container img {
+        width: 40%;
+    }
+}
+
+    @media screen and (max-device-width:521) {
+        #burgermenu {
+            display: none;
+        }
+
+        #burgerclose {
+            display: none;
+        }
+        #burgeropen {
+            display: none;
+        }
+
+        .header-main-links {
+            display: flex;
+        }
+}
+
+    @media screen and (max-device-width:520px) {
+
+    #burgermenu {
+        display: block;
+    }
+
+    #burgerclose {
+        display: none;
+    }
+    #burgeropen {
+        display: block;
+    }
+
+    .header-main-links {
+        display: none;
+    }
+
+    .logo-link {
+        width: auto;
+        height: 80px;
+        text-decoration: none;
+    }
+
+    .logo-link p {
+        display: block;
+        margin-left: 10px;
+        color: black;
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+    @media screen and (max-device-width: 360px) {
+    .fixedmaxwidth {
+        max-width: 300px;
+    }
+    .logo-link p {
+        display: none;
+    }
+    .rate-title {
+        font-size: 18px;
+    }
 }

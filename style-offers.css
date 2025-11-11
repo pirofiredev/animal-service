@@ -4,29 +4,32 @@
     margin: 0;
     padding: 0;
 }
-
 html,body {
-    margin: 0;
-    height: 100%;
-}
-
-body {
     display: flex;
     flex-direction: column;
+
+    height: 100%;
+    margin: 0;
+}
+body {
     font-family: 'Stack Sans Text';
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
 }
 
 .fixedmaxwidth {
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1200px;
+}
+.fixedmaxwidthplus {
+    margin: 0 auto;
+    max-width: 1180px;
 }
 
 /* START OF HEADER */
 
 header {
-    max-width: 100%;
+    width: 100%;
 }
 
 nav {
@@ -34,11 +37,18 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
+    padding: 0 15px;
 }
 
 .logo-link {
+    display: flex;
+    align-items: center;
     width: 100px;
     height: 100px;
+}
+
+.logo-link p {
+    display: none;
 }
 
 .logo-link img {
@@ -80,34 +90,51 @@ nav {
 
 /* END OF HEADER */
 
+/* BURGERMENU START */
 
+#burgermenu {
+    display: none;
+}
 
-/* START OF CONSTRUCTION */
+.burgermenu-popup {
+    display: none;
+}
 
-.constructing {
+#burgerclose {
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+#burgeropen {
+    width: 35px;
+    height: 35px;
+    display: none;
+}
+
+.burger-links-container {
+    position: absolute;
+    right: 10%;
     display: flex;
-    justify-content: center;
-    color: black;
-    margin-bottom: 20px;
-}
-
-.constructing h1 {
-    font-size: 26px;
-    font-weight: 500;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.847);
+    padding: 20px;
     border-radius: 5px;
+    font-size: 24px;
+    gap: 5px;
 }
 
-.constructing a {
-    color: black;
-    transition: 0.2s ease-in-out;
+.burger-links-container a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
 }
-
-.constructing a:hover {
+.burger-links-container p {
+    text-align: center;
     color: #75C149;
+    font-weight: 600;
 }
 
-/* END OF CONSTRUCTION */
-
+/* BURGERMENU END */
 
 
 /* START OF OFFERS */
@@ -120,6 +147,7 @@ nav {
     flex-wrap: wrap;
     margin: 20px 0;
     flex-grow: 1;
+    margin-top: 50px; /* remove if more than one */
 }
 
 .offer {
@@ -156,53 +184,221 @@ nav {
 /* END OF OFFERS*/
 
 
-/* START OF FILLER */
-
-.filler-gallery {
-    margin-bottom: 20px;
-}
-
-.gallery-title {
-    display: flex;
-    justify-content: center;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-.filler-images-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}   
-
-.filler-images-container img {
-    width: 25%;
-    height: auto;
-    margin: 0 10px 10px 10px;
-}
-
-/* END OF FILLER */
-
-
 
 /* START OF FOOTER */
 
+footer {
+    width: 100%;
+    background-color: #75C149;
+}
+
 .footer-wrap {
     padding: 10px;
-    background-color: #75C149;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
     color: white;
     font-weight: 500;
-    width: 100%;
 }
 
 .footer-container img {
     width: 4%;
     height: auto;
 }
+
+/* END OF FOOTER */
+
+/* START OF OPTIMIZATION CONTACT */
+
+
+@media screen and (max-device-width: 1215px) {
+    .fixedmaxwidth {
+        max-width: 1000px;
+    }
+    .fixedmaxwidthplus {
+        max-width: 930px;
+    }
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-device-width: 850px) {
+    .fixedmaxwidth {
+        max-width: 700px;
+    }
+    .fixedmaxwidthplus {
+        max-width: 630px;
+    }
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-device-width:777px) {
+
+    .footer-container img {
+        width: 5%;
+    }
+
+    .logo-link {
+        width: 80px;
+        height: 80px;
+    }
+
+    .fixedmaxwidth {
+        max-width: 640px;
+    }
+    .fixedmaxwidthplus {
+        max-width: 560px;
+    }
+}
+
+@media screen and (max-device-width:641px) {
+    .footer-container img {
+        width: 6%;
+    }
+
+    .fixedmaxwidth {
+        max-width: 600px;
+    }
+    .fixedmaxwidthplus {
+        max-width: 530px;
+    }
+}
+
+@media screen and (max-device-width:570px) {
+
+    .fixedmaxwidth {
+        max-width: 450px;
+    }
+    .fixedmaxwidthplus {
+        max-width: 380px;
+    }
+
+    .footer-container img {
+        width: 8%;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+    @media screen and (max-device-width:521) {
+        #burgermenu {
+            display: none;
+        }
+
+        #burgerclose {
+            display: none;
+        }
+        #burgeropen {
+            display: none;
+        }
+
+        .header-main-links {
+            display: flex;
+        }
+    }
+
+    @media screen and (max-device-width:520px) {
+
+    #burgermenu {
+        display: block;
+    }
+
+    #burgerclose {
+        display: none;
+    }
+    #burgeropen {
+        display: block;
+    }
+
+    .header-main-links {
+        display: none;
+    }
+
+    .logo-link {
+        width: auto;
+        height: 80px;
+        text-decoration: none;
+    }
+
+    .logo-link p {
+        display: block;
+        margin-left: 10px;
+        color: black;
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+    @media screen and (max-device-width: 450px) {
+        .fixedmaxwidth {
+            max-width: 400px;
+        }
+        .fixedmaxwidthplus {
+            max-width: 330px;
+        }
+    }
+
+    @media screen and (max-device-width: 450px) {
+        .fixedmaxwidth {
+            max-width: 350px;
+        }
+        .fixedmaxwidthplus {
+            max-width: 280px;
+        }
+    }
+    
+    @media screen and (max-device-width: 360px) {
+    .fixedmaxwidth {
+        max-width: 300px;
+    }
+    .fixedmaxwidthplus {
+        max-width: 230px;
+    }
+    .logo-link p {
+        display: none;
+    }
+    .offer-title {
+        font-size: 12px;
+    }
+    .offer-text {
+        font-size: 11px;
+    }
+}
+    @media screen and (max-device-width: 340px) {
+        #schedule {
+            font-size: 16px
+        }
+    }    
+    @media screen and (max-device-width: 315px) {
+        .fixedmaxwidth {
+            max-width: 230px;
+        }
+        .fixedmaxwidthplus {
+            max-width: 160px;
+        }
+    }
+    @media screen and (max-device-width: 240px) {
+        body {
+            font-size: 10px;
+        }
+        #schedule {
+            font-size: 12px
+        }
+        .fixedmaxwidth {
+            max-width: 100%;
+        }
+        .fixedmaxwidthplus {
+            max-width: 100%;
+        }
+    }
+

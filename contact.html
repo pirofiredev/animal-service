@@ -7,12 +7,14 @@
     <link rel="icon" type="image/x-icon" href="img/logos/onlylogo-nobg.png">
     <link rel="stylesheet" href="style-contact.css">
     <script src="scriptcontact.js" defer></script>
+    <script src="scriptburger.js" defer></script>
 </head>
 <body>
     <header class="fixedmaxwidth">
         <nav>
             <a href="index.html" alt="animal-service" class="logo-link">
                 <img src="img/logos/onlylogo-nobg.png">
+                <p>Animal-Service</p>
             </a>
 
             <div class="header-main-links">
@@ -21,11 +23,27 @@
                 <a href="offers.html" id="nav-item3">Promocje</a>
                 <a href="about.html" id="nav-item4">O nas</a>
             </div>
+            
+            <div id="burgermenu">
+                
+                <img src="img/drawable/close-bold-svgrepo-com.svg" id="burgerclose">
+                <img src="img/drawable/burger-simple-svgrepo-com.svg" id="burgeropen">
+                
+                <aside class="burgermenu-popup">
+                    <div class="burger-links-container">
+                        <a href="index.html" id="burger-nav-item1">Główna</a>
+                        <p id="burger-nav-item2">Kontakt</p>
+                        <a href="offers.html" id="burger-nav-item3">Promocje</a>
+                        <a href="about.html" id="burger-nav-item4">O nas</a>
+                    </div>
+                </aside>
+
+            </div>
         </nav>
     </header>
 
     <section class="contact-zone">
-        <div class="contact-container">
+        <div class="contact-container fixedmaxwidthplus">
 
             <h1>Wybierz adres</h1>
 
@@ -53,7 +71,7 @@
                 </span>
                 <span>
                     <img src="img/drawable/clock-svgrepo-com.svg">
-                    <p>Pon-Pt 10:00-12:00 oraz 17:00-20:00<br>Sob 10:00-12:00<br>W niedielę jesteśmy zamknięci</p>
+                    <p id="schedule">Pon-Pt - 10:00-12:00 oraz 17:00-20:00<br>Sob - 10:00-12:00<br>W niedielę jesteśmy zamknięci</p>
                 </span>
 
             </div>

@@ -13,7 +13,7 @@ html,body {
 }
 body {
     font-family: 'Stack Sans Text';
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -22,6 +22,10 @@ body {
 .fixedmaxwidth {
     margin: 0 auto;
     max-width: 1200px;
+}
+.fixedmaxwidthplus {
+    margin: 0 auto;
+    max-width: 1180px;
 }
 
 /* START OF HEADER */
@@ -35,11 +39,18 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
+    padding: 0 15px;
 }
 
 .logo-link {
+    display: flex;
+    align-items: center;
     width: 100px;
     height: 100px;
+}
+
+.logo-link p {
+    display: none;
 }
 
 .logo-link img {
@@ -81,6 +92,52 @@ nav {
 
 /* END OF HEADER */
 
+/* BURGERMENU START */
+
+#burgermenu {
+    display: none;
+}
+
+.burgermenu-popup {
+    display: none;
+}
+
+#burgerclose {
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+#burgeropen {
+    width: 35px;
+    height: 35px;
+    display: none;
+}
+
+.burger-links-container {
+    position: absolute;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.847);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    gap: 5px;
+}
+
+.burger-links-container a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.burger-links-container p {
+    text-align: center;
+    color: #75C149;
+    font-weight: 600;
+}
+
+/* BURGERMENU END */
+
 
 /* START OF CONTACT */
 
@@ -103,7 +160,6 @@ nav {
     height: auto;
     filter: brightness(0) saturate(100%) invert(100%) sepia(12%) saturate(7500%) hue-rotate(192deg) brightness(113%) contrast(110%);
     margin-left: 20px;
-    
 }
 .contact-container p {
     color: white;
@@ -139,14 +195,13 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
-    width: 50%;
-    max-height: 60%;
+    width: auto;
+    height: auto;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.62);
     box-shadow: 0 0px 7px 4px #75C149;
+    padding: 20px;
 }
-
 
 .contact-data-container {
     display: flex;
@@ -196,8 +251,78 @@ footer {
     height: auto;
 }
 
-@media screen and (max-device-width:900px) {
+/* START OF OPTIMIZATION CONTACT */
 
+@media screen and (max-device-width: 1800px) {
+    .contact-container select {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-device-width: 1215px) {
+    .fixedmaxwidth {
+        max-width: 1000px;
+    }
+    .fixedmaxwidthplus {
+        max-width: 930px;
+    }
+    body {
+        font-size: 16px;
+    }
+    .contact-container select {
+        font-size: 19px;
+    }
+}
+@media screen and (max-device-width: 1050px) {
+    .fixedmaxwidth {
+        max-width: 800px;
+    }
+    .fixedmaxwidthplus {
+        max-width: 730;
+    }
+    .contact-data-container span {
+        flex-direction: column;
+    }
+    .contact-container p {
+        max-width: 80%;
+    }
+    .contact-container img {
+        margin: 0;
+        width: 6%;
+    }
+    .contact-container p {
+        margin: 0;
+        text-align: center;
+    }
+    .contact-container p {
+        font-size: 1.3em;
+    }
+    .contact-container h1 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-device-width: 850px) {
+    .fixedmaxwidth {
+        max-width: 700px;
+    }
+    .fixedmaxwidthplus {
+        max-width: 630px;
+    }
+    .contact-container img {
+        width: 8%;
+    }
+    .contact-container h1 {
+        font-size: 30px;
+    }
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-device-width:777px) {
+
+    
     .footer-container img {
         width: 5%;
     }
@@ -207,21 +332,11 @@ footer {
         height: 80px;
     }
 
-    .constructing h1 {
-        font-size: 20px;
-    }
-
     .fixedmaxwidth {
-        margin: 0 auto;
-        max-width: 700px;
+        max-width: 640px;
     }
-
-    .contact-container p {
-        font-size: 1em;
-    }
-
-    .contact-container h1 {
-        font-size: 1em;
+    .fixedmaxwidthplus {
+        max-width: 560px;
     }
 }
 
@@ -231,17 +346,25 @@ footer {
         width: 6%;
     }
 
-    .constructing h1 {
-        font-size: 18px;
-    }
-
     .fixedmaxwidth {
-        margin: 0 auto;
         max-width: 600px;
+    }
+    .fixedmaxwidthplus {
+        max-width: 530px;
+    }
+    .contact-container p {
+        font-size: 1.1em;
     }
 }
 
 @media screen and (max-device-width:570px) {
+
+    .fixedmaxwidth {
+        max-width: 450px;
+    }
+    .fixedmaxwidthplus {
+        max-width: 380px;
+    }
 
     .footer-container img {
         width: 8%;
@@ -250,15 +373,130 @@ footer {
     body {
         font-size: 16px;
     }
-
-    .constructing h1 {
-        font-size: 16px;
-    }
-
-    .fixedmaxwidth {
-        margin: 0 auto;
-        max-width: 500px;
-    }
-
-
 }
+
+    @media screen and (max-device-width:521) {
+        #burgermenu {
+            display: none;
+        }
+
+        #burgerclose {
+            display: none;
+        }
+        #burgeropen {
+            display: none;
+        }
+
+        .header-main-links {
+            display: flex;
+        }
+    }
+
+    @media screen and (max-device-width:520px) {
+
+    #burgermenu {
+        display: block;
+    }
+
+    #burgerclose {
+        display: none;
+    }
+    #burgeropen {
+        display: block;
+    }
+
+    .header-main-links {
+        display: none;
+    }
+
+    .logo-link {
+        width: auto;
+        height: 80px;
+        text-decoration: none;
+    }
+
+    .logo-link p {
+        display: block;
+        margin-left: 10px;
+        color: black;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .contact-container select {
+        font-size: 14px;
+    }
+    .contact-container select {
+        width: 50%;
+        max-height: 20%;
+    }
+}
+
+    @media screen and (max-device-width: 450px) {
+        .fixedmaxwidth {
+            max-width: 400px;
+        }
+        .fixedmaxwidthplus {
+            max-width: 330px;
+        }
+    }
+
+    @media screen and (max-device-width: 450px) {
+        .fixedmaxwidth {
+            max-width: 350px;
+        }
+        .fixedmaxwidthplus {
+            max-width: 280px;
+        }
+    }
+    
+    @media screen and (max-device-width: 360px) {
+    .fixedmaxwidth {
+        max-width: 300px;
+    }
+    .fixedmaxwidthplus {
+        max-width: 230px;
+    }
+    .logo-link p {
+        display: none;
+    }
+}
+    @media screen and (max-device-width: 340px) {
+        #schedule {
+            font-size: 16px
+        }
+        .contact-container img {
+            width: 10%;
+        }
+        .contact-container h1 {
+            font-size: 28px;
+        }
+    }    
+    @media screen and (max-device-width: 315px) {
+        .contact-container h1 {
+            font-size: 24px;
+        } 
+        .fixedmaxwidth {
+            max-width: 230px;
+        }
+        .fixedmaxwidthplus {
+            max-width: 160px;
+        }
+    }
+    @media screen and (max-device-width: 240px) {
+        .contact-container h1 {
+            font-size: 20px;
+        }
+        body {
+            font-size: 10px;
+        }
+        #schedule {
+            font-size: 12px
+        }
+        .fixedmaxwidth {
+            max-width: 180px;
+        }
+        .fixedmaxwidthplus {
+            max-width: 110px;
+        }
+    }
+

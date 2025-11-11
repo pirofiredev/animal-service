@@ -6,12 +6,14 @@
     <title>Animal-Service | Promocje</title>
     <link rel="icon" type="image/x-icon" href="img/logos/onlylogo-nobg.png">
     <link rel="stylesheet" href="style-offers.css">
+    <script src="scriptburger.js" defer></script>
 </head>
 <body>
     <header class="fixedmaxwidth">
         <nav>
             <a href="index.html" alt="animal-service" class="logo-link">
                 <img src="img/logos/onlylogo-nobg.png">
+                <p>Animal-Service</p>
             </a>
 
             <div class="header-main-links">
@@ -20,11 +22,27 @@
                 <p id="nav-item3">Promocje</p>
                 <a href="about.html" id="nav-item4">O nas</a>
             </div>
+            
+            <div id="burgermenu">
+                
+                <img src="img/drawable/close-bold-svgrepo-com.svg" id="burgerclose">
+                <img src="img/drawable/burger-simple-svgrepo-com.svg" id="burgeropen">
+                
+                <aside class="burgermenu-popup">
+                    <div class="burger-links-container">
+                        <a href="index.html" id="burger-nav-item1">Główna</a>
+                        <a href="contact.html" id="burger-nav-item2">Kontakt</p>
+                        <p id="burger-nav-item3">Promocje</p>
+                        <a href="about.html" id="burger-nav-item4">O nas</a>
+                    </div>
+                </aside>
+
+            </div>
         </nav>
     </header>
 
     <section class="offers-wrap">
-        <div class="offers-container">
+        <div class="offers-container fixedmaxwidthplus">
             <div class="offer" id="offer1">
                 <p class="offer-title">🩺 Jesienna akcja profilaktyczna w naszej lecznicy!<br>Od 12 do 30 listopada 2025 zapraszamy na kompleksowe badanie krwi – morfologia + biochemia w promocyjnej cenie 99 zł! 💉🐶🐱</p>
                 <p class="offer-text">To świetna okazja, by sprawdzić zdrowie swojego pupila i zadbać o jego dobre samopoczucie. <br>Profilaktyka to klucz do długiego, szczęśliwego życia Twojego zwierzaka ❤️</p>
